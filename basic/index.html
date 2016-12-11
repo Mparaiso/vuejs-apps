@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js guide</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <h3>Vue.js </h3>
+    <h4>Introduction</h4>
+    <a href="https://vuejs.org/v2/guide/index.html">https://vuejs.org/v2/guide/index.html</a>
+    <div id="app">
+        <h5>Use basic binding</h5>
+        {{message}}
+    </div>
+    <div id="app2">
+        <h5>use v-bind attribute</h5>
+        <span v-bind:title="message">
+            Hover to see the message
+        </span>
+    </div>
+    <div id="app3">
+        <h5>if</h5>
+        <span v-if="show">
+            Show this
+        </span>
+    </div>
+    <div id="app4">
+        <h5>for</h5>
+        <ol>
+            <li v-for="todo in todos">{{todo.text}}</li>
+        </ol>
+    </div>
+    <div id="app5">
+        <h5>Handling user input</h5>
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">ReverseMessage</button>
+    </div>
+    <div id="app6">
+        <h5>Component</h5>
+        <!-- todo-item2 is a Vue.js component -->
+        <todo-item2 v-bind:todo="item" v-for="item in list"></todo-item2>
+    </div>
+    <h4>The Vue Instance Constructor</h4>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
+</body>
+
+</html>
